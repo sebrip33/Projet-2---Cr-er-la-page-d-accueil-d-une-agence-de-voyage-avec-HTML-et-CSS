@@ -2,6 +2,46 @@ body {
     font-family:"Poppins", sans-serif;
 }
 
+header {
+    padding: 20px;
+}
+
+.logo-header-left {
+    float: left;
+    padding: 10px;
+}
+
+.logo-header-left img {
+    width: 75px;
+    height: auto;
+}
+
+.header-right {
+    float: right;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+header nav ul li a {
+    display: flex;
+    padding: 10px;
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+}
+
 h1 {
     font-family: "Raleway", sans-serif;
+}
+
+main h1 {
+    margin-top: 90px;
+    margin-left: 30px;
 }
