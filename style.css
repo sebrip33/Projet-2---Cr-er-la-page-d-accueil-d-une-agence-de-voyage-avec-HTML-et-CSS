@@ -47,19 +47,9 @@ header nav ul li a:hover {
     color: #0065fc;
 }
 
-main section ul {
-    display: flex;
-    gap: 40px;
-    padding-left: 0;
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
 
-main section ul li {
-    list-style: none;
-}
 
-.titre-page {
+.title-page {
     line-height: 0.7;
 }
 
@@ -99,6 +89,7 @@ main section ul li {
 
 .form-search ::placeholder {
     color: black;
+    font-family: 'Raleway', sans-serif;
 }
 
 .form-search button[type="submit"] {
@@ -106,18 +97,36 @@ main section ul li {
     color: white;
     font-weight: bold;
     border: none;
-    padding: 0.5em 1em;
+    padding: 0em 1em;
     border-radius: 0px 12px 12px 0px;
     cursor: pointer;
     height: 100%;
+    font-family: 'Raleway', sans-serif;
 }
-.filtre {
+
+.form-search button[type="submit"] #icon {
+    display: none;
+}
+
+main section ul {
+    display: flex;
+    gap: 40px;
+    padding-left: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+main section ul li {
+    list-style: none;
+}
+
+.filter-title {
     padding: 9px;
     font-weight: bold;
     margin-right: -0.5em;
 }
 
-.filtre-fa {
+.filter-fa {
     color: black;
     border: 2px solid #e0dfdf;
     border-radius: 25px;
@@ -131,15 +140,15 @@ main section ul li {
     align-items: center;
 }
 
-.filtre-fa:first-child i {
+.filter-fa:first-child i {
     margin-right: 20px;
 }
 
-.filtre-fa i {
+.filter-fa i {
     margin-right: 0.5em;
 }
 
-.filtre-fa:hover {
+.filter-fa:hover {
     background-color: rgba(25, 148, 167, 0.2);
     cursor: pointer;
     
@@ -212,11 +221,11 @@ article {
     width: 32%;
 }
 
-article h1 {
+article h2 {
     font-size: 22px;
 }
 
-article h1 span {
+article h2 span {
     float: right;
 }
 
@@ -267,6 +276,10 @@ article h1 span {
 .card-link {
     text-decoration: none;
     color: black;
+}
+.card-link:hover {
+    opacity: 0.7;
+    background-color: #cccccc;
 }
 
 .description-text {
@@ -387,5 +400,160 @@ footer {
     }
 }
 @media screen and (max-width: 768px) {
-    
+    body {
+        margin: 5px;
+        text-align: left;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2.5em;
+    }
+    .logo-header-left {
+        display: flex;
+        justify-content: center;
+    }
+    header nav {
+        display: flex;
+        border-bottom: #f2f2f2 4px solid;
+        padding: 65px 30px 20px 30px;
+        justify-content: center;
+    }
+    header nav:focus {
+        color:#0065fc;
+        border-bottom: 4px solid #0065fc;
+    }
+    header nav ul li:first-child {
+        margin-right: 5em;
+    } 
+    header nav ul li a {
+        font-size: 20px;
+    }
+    main p {
+        font-size: 22px;
+    }
+    .title-page {
+        line-height: normal;
+        font-size: 20px;
+    }
+    .form-search {
+        width: 85%;
+        height: 50px;
+    }
+    .form-search label {
+        width: 15%;
+    }
+    .form-search ::placeholder {
+        font-size: 24px;
+        width: 100%;
+    }
+    .form-search button[type="submit"] {
+        width: 15%;
+    }
+    .form-search button[type="submit"] #icon {
+        display: contents;
+        font-size: 17px;
+        color: white;
+    }
+    .form-search button[type="submit"] p {
+        display: none;
+    }
+    main section ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .filter-title {
+        width: 100%;
+        margin-bottom: -30px;
+        font-size: 25px;
+    }
+    .filter-fa {
+        height: 30px;
+    }
+    .cards-wrapper {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+    article {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+    article h2 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .card-populaire {
+        width: 100%;
+        height: 160px;
+        border-radius: 20px;
+    }
+    .card-populaire img {
+        height: 100%;
+    }
+    .card-populaire-description {
+        font-size: 16px;
+        overflow: scroll;
+    }
+    .container {
+        width: 100%;
+    }
+    .container h1 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .container h2 {
+        display: none;
+    }
+    .cards {
+        width: 100%;
+    }
+    .card {
+        width: 100%;
+        height: 240px;
+        border-radius: 20px;
+    }
+    .card-description {
+        font-size: 16px;
+        line-height: 15px;
+        margin-top: 12px;
+        overflow: scroll;
+    }
+    .card-description .stars {
+        margin-top: -6px;
+    }
+    .activites-container h1 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .activites {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .elements-activites {
+        width: 100%;
+        height: 250px;
+        border-radius: 20px;
+    }
+    .elements-activites img {
+        height: 70%;
+        object-fit: cover;
+    }
+    .elements-activites h3 {
+        font-size: 22px;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .element-footer h2 {
+        font-size: 25px;
+    }
+    .element-footer {
+        font-size: 22px;
+    }
 }

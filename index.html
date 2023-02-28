@@ -2,11 +2,9 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1, firefox=1, IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-  
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/05c2ed4270.js" crossorigin="anonymous"></script>
     <title>Booki - Accueil</title>
 </head>
@@ -14,7 +12,7 @@
 <body>
     <header>
       <div class="logo-header-left">
-        <img src="images/Images Booki/logo/Booki.png" alt="Logo-Booki">
+        <img src="images/Images-Booki/logo/Booki.png" alt="Logo-Booki">
       </div>
       <div class="header-right">
         <nav>
@@ -28,25 +26,25 @@
     
     <main>
       <section>
-        <div class="titre-page">     
+        <div class="title-page">     
           <h1>Trouver votre hébergement pour des vacances de rêve</h1>
           <p>En plein centre ville ou en pleine nature</p>
         </div> 
         
         <!-- Création de la barre de recherche -->
-        <form class="form-search" method="get" action="">
+        <form class="form-search" method="get" action="#">
           <label for="recherche"><i class="fa-solid fa-location-dot" id="icon"></i></label>
           <input type="text" name="recherche" id="recherche" placeholder="  Marseille, France">
-          <button type="submit">Rechercher</button>
+          <button type="submit"><i class="fa-solid fa-magnifying-glass" id="icon"></i><p>Rechercher</p></button>
         </form>
         
         <!-- Les filtres -->
         <ul>
-          <li class="filtre">Filtres</li>
-          <li class="filtre-fa"><i class="fa-solid fa-money-bill-wave" id="icon"></i>Économique</li>
-          <li class="filtre-fa"><i class="fa-solid fa-person" id="icon"></i>Familial</li>
-          <li class="filtre-fa"><i class="fa-solid fa-heart" id="icon"></i>Romantique</li>
-          <li class="filtre-fa"><i class="fa-solid fa-dog" id="icon"></i>Animaux autorisés</li>
+          <li class="filter-title">Filtres</li>
+          <li class="filter-fa"><i class="fa-solid fa-money-bill-wave" id="icon"></i>Économique</li>
+          <li class="filter-fa"><i class="fa-solid fa-person" id="icon"></i>Familial</li>
+          <li class="filter-fa"><i class="fa-solid fa-heart" id="icon"></i>Romantique</li>
+          <li class="filter-fa"><i class="fa-solid fa-dog" id="icon"></i>Animaux autorisés</li>
         </ul>
 
         <p><i class="fa-solid fa-circle-info" id="icon"></i>Plus de 500 logements
@@ -55,96 +53,108 @@
         <!-- Création du bloc contenant les "hébergements à Marseille" et "les plus poulaires" -->
         <div class="cards-wrapper">
           <div class="container">
-            <h1>Hébergements à Marseille</h1>
+            <h1 id="hebergements">Hébergements à Marseille</h1>
             <!-- Bloc regroupant les cartes d'hébergement -->
             <div class="cards">
               <div class="card">  <!-- (bloc de création d'une carte)-->
                 <a href="#" class="card-link">  
-                  <img src="Images/Images Booki/hebergements/4_small/Auberge-La-Canebiere.jpg"
+                  <img src="Images/Images-Booki/hebergements/4_small/Auberge-La-Canebiere.jpg"
                   alt="Image Auberge La Canebière">
                   <div class="card-description">  <!-- (bloc de description de la carte)-->        
                     <h3>Auberge La Canebière</h3>
                     <p>Nuit à partir de 25€</p>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-none"></i>
+                    <div class="stars">
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-none"></i>
+                    </div>
                   </div>
                 </a>
               </div>
               <div class="card">
                 <a href="#" class="card-link">
-                  <img src="Images/Images Booki/hebergements/4_small/Hotel-du-Port.jpg"
+                  <img src="Images/Images-Booki/hebergements/4_small/Hotel-du-Port.jpg"
                   alt="Image Hôtel du port">
                   <div class="card-description">        
                     <h3>Hôtel du port</h3>
                     <p>Nuit à partir de 52€</p>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-none"></i>
+                    <div class="stars">
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-none"></i>
+                    </div>
                   </div>
                 </a>
               </div>           
               <div class="card">
                 <a href="#" class="card-link">
-                  <img src="Images/Images Booki/hebergements/4_small/Hotel-Les-Mouettes.jpg"
+                  <img src="Images/Images-Booki/hebergements/4_small/Hotel-Les-Mouettes.jpg"
                   alt="Image Hôtel Les mouettes">     
                   <div class="card-description">       
                     <h3>Hôtel Les mouettes</h3>
                     <p>Nuit à partir de 76€</p>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-none"></i>
+                    <div class="stars">
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-none"></i>
+                    </div>
                   </div>
                 </a>
               </div>
               <div class="card">
                 <a href="#" class="card-link">
-                  <img src="Images/Images Booki/hebergements/4_small/Hotel-de-la-mer.jpg"
+                  <img src="Images/Images-Booki/hebergements/4_small/Hotel-de-la-mer.jpg"
                   alt="Image Hôtel de la mer"> 
                   <div class="card-description">          
                     <h3>Hôtel de la mer</h3>
                     <p>Nuit à partir de 46€</p>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-none"></i>
+                    <div class="stars">
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-none"></i>
+                    </div>
                   </div>
                 </a>
               </div>
               <div class="card">
                 <a href="#" class="card-link">
-                  <img src="Images/Images Booki/hebergements/4_small/Auberge-Le-Panier.jpg"
+                  <img src="Images/Images-Booki/hebergements/4_small/Auberge-Le-Panier.jpg"
                   alt="Image Auberge Le Panier">
                   <div class="card-description">            
                     <h3>Auberge Le Panier</h3>
                     <p>Nuit à partir de 23€</p>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-none"></i>
+                    <div class="stars">
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-none"></i>
+                    </div>
                   </div>
                 </a>
               </div>
               <div class="card">
                 <a href="#" class="card-link">
-                  <img src="Images/Images Booki/hebergements/4_small/Hotel-Chez-Amina.jpg"
+                  <img src="Images/Images-Booki/hebergements/4_small/Hotel-Chez-Amina.jpg"
                   alt="Image Hôtel Chez Amina">    
                   <div class="card-description">        
                     <h3>Hôtel Chez Amina</h3>
                     <p>Nuit à partir de 96€</p>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-checked"></i>
-                    <i class="fa-solid fa-star" id="star-none"></i>
+                    <div class="stars">
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-checked"></i>
+                      <i class="fa-solid fa-star" id="star-none"></i>
+                    </div>
                   </div>
                 </a>
               </div>
@@ -153,14 +163,12 @@
           </div>
 
           <article>
-            <h1>Les plus populaires<span><i class="fa-solid fa-chart-line" id="icon"></i></span></h1>
-
+            <h2>Les plus populaires<span><i class="fa-solid fa-chart-line" id="icon"></i></span></h2>
             <!-- Bloc regroupant les cartes d'hébergement "les plus populaires" -->
-            <div class="cards-populaires">
-              
+            <div class="cards-populaires">             
               <div class="card-populaire">  <!-- bloc de création d'une carte "populaire" -->
                 <a href="#" class="card-link">
-                  <img src="Images/Images Booki/hebergements/4_small/Hotel-Le-soleil-du-matin.jpg"
+                  <img src="Images/Images-Booki/hebergements/4_small/Hotel-Le-soleil-du-matin.jpg"
                   alt="Image Hôtel Le soleil du matin">
                   <div class="card-populaire-description">  <!-- bloc de decription de la carte -->
                     <div class="description-text">
@@ -179,7 +187,7 @@
               </div>
               <div class="card-populaire">
                 <a href="#" class="card-link">
-                  <img src="Images/Images Booki/hebergements/4_small/Chambres-d-hotes-Au-coeur-de-l-eau.jpg"
+                  <img src="Images/Images-Booki/hebergements/4_small/Chambres-d-hotes-Au-coeur-de-l-eau.jpg"
                   alt="Chambres d'hôtes Au coeur de l'eau">
                   <div class="card-populaire-description">
                     <div class="description-text">
@@ -198,7 +206,7 @@
               </div>
               <div class="card-populaire">
                 <a href="#" class="card-link">
-                  <img src="Images/Images Booki/hebergements/4_small/Hotel Bleu et Blanc.jpg"
+                  <img src="Images/Images-Booki/hebergements/4_small/Hotel-Bleu-et-Blanc.jpg"
                   alt="Image Hôtel Bleu et Blanc">
                   <div class="card-populaire-description">
                     <div class="description-text">
@@ -223,27 +231,34 @@
         <section>
           <div class="activites-container"> <!-- Création du bloc container de la section -->
             <h1 id="activites">Activités à Marseille</h1>
-
             <div class="activites"> <!-- Bloc regroupant les cartes d'activités -->
               <div class="elements-activites">  <!-- Création d'une carte d'activité -->
-                <img src="Images/Images Booki/activites/3_medium/vieux-port.jpg"
-                alt="Image Vieux-Port">
-                <h3>Vieux-Port</h3>
+                <a href="#" class="card-link">
+                  <img src="Images/Images-Booki/activites/3_medium/vieux-port.jpg"
+                  alt="Image Vieux-Port">
+                  <h3>Vieux-Port</h3>
+                </a>
               </div>
               <div class="elements-activites">
-                <img src="Images/Images Booki/activites/3_medium/fort-de-pommeges.jpg"
-                alt="Image Fort de Pomègues">
-                <h3>Fort de Pomègues</h3>
+                <a href="#" class="card-link">
+                  <img src="Images/Images-Booki/activites/3_medium/fort-de-pommeges.jpg"
+                  alt="Image Fort de Pomègues">
+                  <h3>Fort de Pomègues</h3>
+                </a>
               </div>
               <div class="elements-activites">
-                <img src="Images/Images Booki/activites/3_medium/calanques.jpg"
-                alt="Image Parc national des Calanques">
-                <h3>Parc national des Calanques</h3>
+                <a href="#" class="card-link">
+                  <img src="Images/Images-Booki/activites/3_medium/calanques.jpg"
+                  alt="Image Parc national des Calanques">
+                  <h3>Parc national des Calanques</h3>
+                </a>
               </div>
               <div class="elements-activites">
-                <img src="Images/Images Booki/activites/3_medium/notre-dame-de-la-garde.jpg"
-                alt="Image Notre-Dame-De-La-Garde">
-                <h3>Notre-Dame-De-La-Garde</h3>
+                <a href="#" class="card-link">
+                  <img src="Images/Images-Booki/activites/3_medium/notre-dame-de-la-garde.jpg"
+                  alt="Image Notre-Dame-De-La-Garde">
+                  <h3>Notre-Dame-De-La-Garde</h3>
+                </a>
               </div>
             </div>
           </div>         
@@ -270,4 +285,4 @@
         </div>
       </footer>
 </body>
-</html>
+</html> 
