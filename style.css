@@ -74,7 +74,7 @@ header nav ul li a:hover {
     justify-content: center;
 
 }
-.form-search #icon {
+.form-search .blue {
     color: black;
 }
 
@@ -104,7 +104,7 @@ header nav ul li a:hover {
     font-family: 'Raleway', sans-serif;
 }
 
-.form-search button[type="submit"] #icon {
+.form-search button[type="submit"] .blue {      /*faire disparaître l'icone "loupe"*/
     display: none;
 }
 
@@ -154,7 +154,7 @@ main section ul li {
     
 }
 
-p #icon {
+p .blue {
     margin-right: 0.5em;
 }
 
@@ -286,11 +286,11 @@ article h2 span {
     align-items: flex-start;
 }
 
-#star-checked {
+.checked {      /*(étoiles)*/
     color: #0065fc;
 }
 
-#star-none {
+.none {     /*étoiles*/
     color: #f2f2f2;
 }
 
@@ -322,7 +322,7 @@ article h2 span {
 }
 
 
-#icon {
+.blue {
     color: #0065fc;
 }
 
@@ -419,15 +419,14 @@ footer {
         padding: 65px 30px 20px 30px;
         justify-content: center;
     }
-    header nav:focus {
-        color:#0065fc;
-        border-bottom: 4px solid #0065fc;
-    }
     header nav ul li:first-child {
         margin-right: 5em;
     } 
     header nav ul li a {
         font-size: 20px;
+    }
+    header nav a:focus {
+        border-bottom-color :#0065fc;
     }
     main p {
         font-size: 22px;
@@ -450,12 +449,12 @@ footer {
     .form-search button[type="submit"] {
         width: 15%;
     }
-    .form-search button[type="submit"] #icon {
-        display: contents;
+    .form-search button[type="submit"] .blue {      /*faire réapparaître l'icône "loupe"*/
+        display: contents;      
         font-size: 17px;
         color: white;
     }
-    .form-search button[type="submit"] p {
+    .form-search button[type="submit"] span {
         display: none;
     }
     main section ul {
