@@ -12,7 +12,7 @@
 <body>
     <header>
       <div class="logo-header-left">
-        <img src="images/Images-Booki/logo/Booki.png" alt="Logo-Booki">
+        <img src="images/logo/Booki.png" alt="Logo-Booki">
       </div>
       <div class="header-right">
         <nav>
@@ -34,21 +34,23 @@
         <!-- Création de la barre de recherche -->
         <form class="form-search" method="get" action="#">
           <label for="recherche"><i class="fa-solid fa-location-dot blue"></i></label>
-          <input type="text" name="recherche" id="recherche" placeholder="  Marseille, France">
+          <input type="text" name="recherche" id="recherche" placeholder="Marseille, France">
           <button type="submit"><i class="fa-solid fa-magnifying-glass blue"></i><span>Rechercher</span></button>
         </form>
         
         <!-- Les filtres -->
-        <ul>
+        <ul class="filters-li">
           <li class="filter-title">Filtres</li>
-          <li class="filter-fa"><i class="fa-solid fa-money-bill-wave blue"></i>Économique</li>
-          <li class="filter-fa"><i class="fa-solid fa-person blue"></i>Familial</li>
-          <li class="filter-fa"><i class="fa-solid fa-heart blue"></i>Romantique</li>
-          <li class="filter-fa"><i class="fa-solid fa-dog blue"></i>Animaux autorisés</li>
+           <li class="filter-fa eco"><i class="fa-solid fa-money-bill-wave blue"></i>Économique</li>
+          <li class="filter-fa familial"><i class="fa-solid fa-person blue"></i>Familial</li>
+           <li class="filter-fa romantique"><i class="fa-solid fa-heart blue"></i>Romantique</li>
+           <li class="filter-fa animaux"><i class="fa-solid fa-dog blue"></i>Animaux autorisés</li>
         </ul>
 
-        <p><i class="fa-solid fa-circle-infoblue"></i>Plus de 500 logements
-        sont disponibles dans cette ville</p>
+        <div class="after-filter">
+          <i class="fa-solid fa-info blue"></i><p>Plus de 500 logements 
+            sont disponibles dans cette ville</p>
+        </div>
         
         <!-- Création du bloc contenant les "hébergements à Marseille" et "les plus poulaires" -->
         <div class="cards-wrapper">
@@ -58,7 +60,7 @@
             <div class="cards">
               <div class="card">  <!-- (bloc de création d'une carte)-->
                 <a href="#" class="card-link">  
-                  <img src="Images/Images-Booki/hebergements/4_small/Auberge-La-Canebiere.jpg"
+                  <img src="Images/hebergements/4_small/Auberge-La-Canebiere.jpg"
                   alt="Image Auberge La Canebière">
                   <div class="card-description">  <!-- (bloc de description de la carte)-->        
                     <h3>Auberge La Canebière</h3>
@@ -75,7 +77,7 @@
               </div>
               <div class="card">
                 <a href="#" class="card-link">
-                  <img src="Images/Images-Booki/hebergements/4_small/Hotel-du-Port.jpg"
+                  <img src="Images/hebergements/4_small/Hotel-du-Port.jpg"
                   alt="Image Hôtel du port">
                   <div class="card-description">        
                     <h3>Hôtel du port</h3>
@@ -92,7 +94,7 @@
               </div>           
               <div class="card">
                 <a href="#" class="card-link">
-                  <img src="Images/Images-Booki/hebergements/4_small/Hotel-Les-Mouettes.jpg"
+                  <img src="Images/hebergements/4_small/Hotel-Les-Mouettes.jpg"
                   alt="Image Hôtel Les mouettes">     
                   <div class="card-description">       
                     <h3>Hôtel Les mouettes</h3>
@@ -109,7 +111,7 @@
               </div>
               <div class="card">
                 <a href="#" class="card-link">
-                  <img src="Images/Images-Booki/hebergements/4_small/Hotel-de-la-mer.jpg"
+                  <img src="Images/hebergements/4_small/Hotel-de-la-mer.jpg"
                   alt="Image Hôtel de la mer"> 
                   <div class="card-description">          
                     <h3>Hôtel de la mer</h3>
@@ -126,7 +128,7 @@
               </div>
               <div class="card">
                 <a href="#" class="card-link">
-                  <img src="Images/Images-Booki/hebergements/4_small/Auberge-Le-Panier.jpg"
+                  <img src="Images/hebergements/4_small/Auberge-Le-Panier.jpg"
                   alt="Image Auberge Le Panier">
                   <div class="card-description">            
                     <h3>Auberge Le Panier</h3>
@@ -143,7 +145,7 @@
               </div>
               <div class="card">
                 <a href="#" class="card-link">
-                  <img src="Images/Images-Booki/hebergements/4_small/Hotel-Chez-Amina.jpg"
+                  <img src="Images/hebergements/4_small/Hotel-Chez-Amina.jpg"
                   alt="Image Hôtel Chez Amina">    
                   <div class="card-description">        
                     <h3>Hôtel Chez Amina</h3>
@@ -168,7 +170,7 @@
             <div class="cards-populaires">             
               <div class="card-populaire">  <!-- bloc de création d'une carte "populaire" -->
                 <a href="#" class="card-link">
-                  <img src="Images/Images-Booki/hebergements/4_small/Hotel-Le-soleil-du-matin.jpg"
+                  <img src="Images/hebergements/4_small/Hotel-Le-soleil-du-matin.jpg"
                   alt="Image Hôtel Le soleil du matin">
                   <div class="card-populaire-description">  <!-- bloc de decription de la carte -->
                     <div class="description-text">
@@ -187,7 +189,7 @@
               </div>
               <div class="card-populaire">
                 <a href="#" class="card-link">
-                  <img src="Images/Images-Booki/hebergements/4_small/Chambres-d-hotes-Au-coeur-de-l-eau.jpg"
+                  <img src="Images/hebergements/4_small/Chambres-d-hotes-Au-coeur-de-l-eau.jpg"
                   alt="Chambres d'hôtes Au coeur de l'eau">
                   <div class="card-populaire-description">
                     <div class="description-text">
@@ -206,7 +208,7 @@
               </div>
               <div class="card-populaire">
                 <a href="#" class="card-link">
-                  <img src="Images/Images-Booki/hebergements/4_small/Hotel-Bleu-et-Blanc.jpg"
+                  <img src="Images/hebergements/4_small/Hotel-Bleu-et-Blanc.jpg"
                   alt="Image Hôtel Bleu et Blanc">
                   <div class="card-populaire-description">
                     <div class="description-text">
@@ -234,28 +236,28 @@
             <div class="activites"> <!-- Bloc regroupant les cartes d'activités -->
               <div class="elements-activites">  <!-- Création d'une carte d'activité -->
                 <a href="#" class="card-link">
-                  <img src="Images/Images-Booki/activites/3_medium/vieux-port.jpg"
+                  <img src="Images/activites/3_medium/vieux-port.jpg"
                   alt="Image Vieux-Port">
                   <h3>Vieux-Port</h3>
                 </a>
               </div>
               <div class="elements-activites">
                 <a href="#" class="card-link">
-                  <img src="Images/Images-Booki/activites/3_medium/fort-de-pommeges.jpg"
+                  <img src="Images/activites/3_medium/fort-de-pommeges.jpg"
                   alt="Image Fort de Pomègues">
                   <h3>Fort de Pomègues</h3>
                 </a>
               </div>
               <div class="elements-activites">
                 <a href="#" class="card-link">
-                  <img src="Images/Images-Booki/activites/3_medium/calanques.jpg"
+                  <img src="Images/activites/3_medium/calanques.jpg"
                   alt="Image Parc national des Calanques">
                   <h3>Parc national des Calanques</h3>
                 </a>
               </div>
               <div class="elements-activites">
                 <a href="#" class="card-link">
-                  <img src="Images/Images-Booki/activites/3_medium/notre-dame-de-la-garde.jpg"
+                  <img src="Images/activites/3_medium/notre-dame-de-la-garde.jpg"
                   alt="Image Notre-Dame-De-La-Garde">
                   <h3>Notre-Dame-De-La-Garde</h3>
                 </a>
