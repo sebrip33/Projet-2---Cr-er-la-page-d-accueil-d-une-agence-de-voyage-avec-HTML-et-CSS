@@ -1,12 +1,9 @@
 body {
     max-width: 1440px;
     font-family: 'Raleway', sans-serif;
-    margin: 20px;
-    padding: 15px;
-}
-
-h1, h2, h3 {
-    font-family: 'Raleway', sans-serif;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 40px;
 }
 
 h2 {
@@ -67,7 +64,7 @@ header nav ul li a:hover {
     border-radius: 16px;
     padding: 0;
     margin-top: 1.5em;
-    width: 30%;
+    width: 25%;
     height: 50px;
     font-family: 'raleway', sans-serif;
 }
@@ -91,13 +88,13 @@ header nav ul li a:hover {
     border: none;
     font-size: 19px;
     font-weight: bold;
-    flex: 1;
     padding-left: 0.8em;
     height: 100%;
 }
 
 .form-search ::placeholder {
     color: black;
+    opacity: 1;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -110,30 +107,33 @@ header nav ul li a:hover {
     padding: 0em 1em;
     border-radius: 0px 12px 12px 0px;
     cursor: pointer;
-    height: 100%;
+    padding: 0.8em;
 }
 
 .form-search button[type="submit"] .blue {      /*faire disparaître l'icone "loupe"*/
     display: none;
 }
 
-main section ul li {
+.filters-li {
+    display: flex;
+    width: 100%;
+    padding-left: 0;
+    margin-top: 1.5em;
+    margin-bottom: 0;
     list-style: none;
 }
 
-.filters-li {
+.filters-li ul {
     display: flex;
-    gap: 30px;
-    padding-left: 0;
-    margin-top: 20px;
-    margin-bottom: 15px;
+    gap: 2.22em;
+    flex-shrink: 1;
+    flex-grow: 1;
 }
 
 .filter-title {
-    padding: 9px;
+    padding: 9px 0 9px 9px;
     font-weight: 550;
     font-size: 18px;
-    margin-right: -0.3em;
     display: flex;
     align-items: center;
 }
@@ -143,21 +143,19 @@ main section ul li {
     color: black;
     border: 2px solid #e0dfdf;
     border-radius: 25px;
-    padding: 9px;
+    padding: 10px 2vw 10px 2vw;
     font-weight: 550;
     font-size: 17px;
-    width: 195px;
+    max-width: 100%;
     height: 28px;
-    margin-left: -0.5em;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-basis: 0;
 }
 
-.familial,
-.eco,
-.romantique {
-    padding: 9px 0 9px 0;
+.animaux {
+    white-space: nowrap;
 }
 
 .filter-fa .blue {
@@ -222,9 +220,9 @@ main section ul li {
 }
 
 .card {
-    border-radius: 14px;
+    border-radius: 16px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    padding: 7px;
+    padding: 5px;
     margin: 15px;
     margin-bottom: 20px;
     width: 230px;
@@ -233,7 +231,7 @@ main section ul li {
 }
 
 .card img {
-    border-radius: 14px 14px 0px 0px;
+    border-radius: 16px 16px 0px 0px;
     height: 60%;
     object-fit: cover;/*couvre la zone d'affichage*/
     width: 100%;
@@ -241,8 +239,9 @@ main section ul li {
 
 .card-description {
     font-size: 15px;
-    line-height: 1em;
+    line-height: 0.7em;
     margin-left: 5px;
+    margin-top: 8px;
 }
 .card-description h3 {
     margin-top: 2px;
@@ -273,9 +272,9 @@ article h2 span {
 .card-populaire {
     display: flex;
     flex-direction: row;
-    border-radius: 14px;
+    border-radius: 16px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    padding: 7px;
+    padding: 5px;
     margin: 15px;
     margin-bottom: 20px;
     width: 340px;
@@ -289,8 +288,7 @@ article h2 span {
 }
 
 .card-populaire img {
-    border-radius: 14px 0px 0px 14px;
-    height: 130px;
+    border-radius: 16px 0px 0px 16px;
     object-fit: cover;
     width: 35%;
 }
@@ -302,10 +300,11 @@ article h2 span {
     justify-content: space-between;
     height: 100%;
     margin-left: 2em;
+    width: 60%;
 }
 
 .card-populaire-description h3 {
-    margin-bottom: -5px;
+    margin-top: 10px;
 }
 
 .card-link {
@@ -317,10 +316,9 @@ article h2 span {
     background-color: #cccccc;
 }
 
-.description-text {
-    align-items: flex-start;
+.stars {
+    font-size: 12px;
 }
-
 .checked {      /*(étoiles)*/
     color: #0065fc;
 }
@@ -392,10 +390,19 @@ footer {
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     body {
-        margin-left: 30px;
+        margin: 35px;
     }
     .form-search {
-        width: 50%;
+        width: 44%;
+        font-size: 19px;
+    }
+    .filters-li {
+        margin-right: 20px;
+    }
+    .filters-li ul {
+        gap: 1em;
+        padding-left: 20px;
+
     }
     .cards-wrapper {
         display: flex;
@@ -405,6 +412,9 @@ footer {
         width: 100%;
         margin-bottom: 40px;
     }
+    .card-description h3 {
+        font-size: 16px;
+    }
     article {
         width: 100%;
     }
@@ -412,18 +422,17 @@ footer {
         display: flex;
     }
     .card-populaire {
-        width: 28%;
-        height: 120px;
+        width: 27%;
+        height: 135px;
         margin-left: 5px;
     }
     .card-populaire img {
-        height: 120px;
+        width: 42%;
     }
     .card-populaire-description {
-        margin-top: -10px;
+        margin-left: 15px;
     }
-    .description-text,
-    .stars {
+    .description-text {
         font-size: 12px;
     }
     .elements-activites {
@@ -439,11 +448,13 @@ footer {
         margin-left: 0.5em;
         font-size: 16px;
     }
+    .element-footer p {
+        font-size: 16px;
+    }
 }
 @media screen and (max-width: 768px) {
     body {
         margin: 5px;
-        text-align: left;
     }
     header {
         display: flex;
@@ -474,7 +485,7 @@ footer {
         margin-left: 0;
     }
     header nav ul li a {
-        font-size: 18px;
+        font-size: 17px;
     }
     header nav li:hover {
         border-bottom: medium solid #0065fc;
@@ -484,7 +495,9 @@ footer {
     }
     .title-page {
         line-height: normal;
-        font-size: 17px;
+    }
+    .title-page h1 {
+        font-size: 22px;
     }
     .title-page p,
     .after-filter {
@@ -492,15 +505,22 @@ footer {
     }
     .form-search {
         height: 50px;
+        width: 60%;
+        justify-content: space-between;
     }
     .form-search label {
-        max-width: 15%;
+        max-width: 10%;
+        padding: 2px 15px 2px 15px;
+    }
+    .form-search input[type="text"] {
+        font-size: 16px;
     }
     .form-search ::placeholder {
-        font-size: 20px;
+        font-size: 19px;
     }
     .form-search button[type="submit"] {
         width: 20%;
+        padding: 18px 15px 18px 15px;
     }
     .form-search button[type="submit"] .blue {      /*faire réapparaître l'icône "loupe"*/
         display: contents;
@@ -515,31 +535,42 @@ footer {
     }
     .filter-title {
         width: 100%;
-        margin-bottom: -10px;
+        margin-bottom: 0;
+        padding-bottom: 0;
         font-size: 22px;
     }
     .filter-fa {
         height: 30px;
-        font-size: 13px;
+        font-size: 13px;        
     }
+    .familial,
     .animaux {
-        padding: 9px 0 9px 0;
+        margin-right: 20px;
     }
     .filters-li {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        gap: 20px;
-        margin-left: 10px;
-        align-items: center;
+        gap: 1.5em;
+        margin-left: 0;
+        margin-top: 0;
         padding: 0;
+    }
+    .filters-li ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content:left;
+        padding-left: 0;
+        margin-top: 0;
+        gap: 0.8em;
+        flex-shrink: 1;
     }
     .filters-li .blue {
         font-size: 22px;
     }
 
     .after-filter p{
-        font-size: 18px;
+        font-size: 17px;
     }
     .cards-wrapper {
         display: flex;
@@ -550,34 +581,28 @@ footer {
         margin-bottom: 2em;
     }
     article h2 {
-        font-size: 26px;
+        font-size: 23px;
         font-weight: bold;
         margin-bottom: 15px;
         margin-left: 20px;
     }
     .card-populaire {
         width: 100%;
-        height: 160px;
+        height: 140px;
         border-radius: 20px;
     }
     .card-populaire img {
-        height: 100%;
+        width: 45%;
     }
-    .card-populaire-description {
-        margin-top: -8px;
-    }
-    .card-populaire-description,
-    .card-populaire-description p {
-        font-size: 15px;
-    }
-    .card-populaire .stars {
-        margin-top: -8px;
+    .description-text h3,
+    .description-text p {
+        font-size: 14px;
     }
     .container {
         width: 100%;
     }
     .container h1 {
-        font-size: 26px;
+        font-size: 23px;
         font-weight: bold;
         margin-bottom: 5px;
     }
@@ -589,12 +614,12 @@ footer {
     }
     .card {
         width: 100%;
-        height: 220px;
+        height: 190px;
         border-radius: 20px;
     }
     .card-description,
     .card-description p {
-        font-size: 15px;
+        font-size: 14px;
         line-height: 15px;
         margin-top: 12px;
     }
@@ -602,7 +627,7 @@ footer {
         margin-top: -8px;
     }
     .activites-container h1 {
-        font-size: 26px;
+        font-size: 23px;
         font-weight: bold;
     }
     .activites {
@@ -621,7 +646,7 @@ footer {
         object-fit: cover;
     }
     .elements-activites h3 {
-        font-size: 20px;
+        font-size: 19px;
     }
     footer {
         display: flex;
@@ -629,9 +654,9 @@ footer {
         gap: 20px;
     }
     .element-footer h2 {
-        font-size: 20px;
+        font-size: 19px;
     }
-    .element-footer {
+    .element-footer p {
         font-size: 16px;
     }
 }
