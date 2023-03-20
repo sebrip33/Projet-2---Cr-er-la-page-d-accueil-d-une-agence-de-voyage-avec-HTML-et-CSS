@@ -9,7 +9,7 @@
     <title>Booki - Accueil</title>
 </head>
 
-<body>
+  <body>
     <header>
       <div class="logo-header-left">
         <img src="images/logo/Booki.png" alt="Logo-Booki">
@@ -37,7 +37,7 @@
           <input type="text" name="recherche" id="recherche" placeholder="Marseille, France">
           <button type="submit"><i class="fa-solid fa-magnifying-glass blue"></i><span>Rechercher</span></button>
         </form>
-        
+       
         <!-- Les filtres -->
         <div class="filters-li">
           <h2 class="filter-title">Filtres</h2>
@@ -48,7 +48,9 @@
             <li class="filter-fa animaux"><i class="fa-solid fa-dog blue"></i>Animaux autorisés</li>
           </ul>
         </div>
-
+      </section>
+      
+      <section>
         <div class="after-filter">
           <i class="fa-solid fa-info blue"></i><p>Plus de 500 logements 
             sont disponibles dans cette ville</p>
@@ -163,10 +165,10 @@
                 </a>
               </div>
             </div>
-            <h2>Afficher plus</h2>
+            <span>Afficher plus<span>
           </div>
 
-          <article>
+          <aside>
             <h2>Les plus populaires<span><i class="fa-solid fa-chart-line blue"></i></span></h2>
             <!-- Bloc regroupant les cartes d'hébergement "les plus populaires" -->
             <div class="cards-populaires">             
@@ -228,65 +230,65 @@
                 </a>
               </div>
             </div>
-          </article>
+          </aside>
         </div>
-        </section>
+      </section>
 
-        <section>
-          <div class="activites-container"> <!-- Création du bloc container de la section -->
-            <h1 id="activites">Activités à Marseille</h1>
-            <div class="activites"> <!-- Bloc regroupant les cartes d'activités -->
-              <div class="elements-activites">  <!-- Création d'une carte d'activité -->
-                <a href="#" class="card-link">
-                  <img src="Images/activites/3_medium/vieux-port.jpg"
-                  alt="Image Vieux-Port">
-                  <h3>Vieux-Port</h3>
-                </a>
-              </div>
-              <div class="elements-activites">
-                <a href="#" class="card-link">
-                  <img src="Images/activites/3_medium/fort-de-pommeges.jpg"
-                  alt="Image Fort de Pomègues">
-                  <h3>Fort de Pomègues</h3>
-                </a>
-              </div>
-              <div class="elements-activites">
-                <a href="#" class="card-link">
-                  <img src="Images/activites/3_medium/calanques.jpg"
-                  alt="Image Parc national des Calanques">
-                  <h3>Parc national des Calanques</h3>
-                </a>
-              </div>
-              <div class="elements-activites">
-                <a href="#" class="card-link">
-                  <img src="Images/activites/3_medium/notre-dame-de-la-garde.jpg"
-                  alt="Image Notre-Dame-De-La-Garde">
-                  <h3>Notre-Dame-De-La-Garde</h3>
-                </a>
-              </div>
+      <section>
+        <div class="activites-container"> <!-- Création du bloc container de la section -->
+          <h1 id="activites">Activités à Marseille</h1>
+          <div class="activites"> <!-- Bloc regroupant les cartes d'activités -->
+            <div class="elements-activites">  <!-- Création d'une carte d'activité -->
+              <a href="#" class="card-link">
+                <img src="Images/activites/3_medium/vieux-port.jpg"
+                alt="Image Vieux-Port">
+                <h3>Vieux-Port</h3>
+              </a>
             </div>
-          </div>         
-        </section>
-      </main>
+            <div class="elements-activites">
+              <a href="#" class="card-link">
+                <img src="Images/activites/3_medium/fort-de-pommeges.jpg"
+                alt="Image Fort de Pomègues">
+                <h3>Fort de Pomègues</h3>
+              </a>
+            </div>
+            <div class="elements-activites">
+              <a href="#" class="card-link">
+                <img src="Images/activites/3_medium/calanques.jpg"
+                alt="Image Parc national des Calanques">
+                <h3>Parc national des Calanques</h3>
+              </a>
+            </div>
+            <div class="elements-activites">
+              <a href="#" class="card-link">
+                <img src="Images/activites/3_medium/notre-dame-de-la-garde.jpg"
+                alt="Image Notre-Dame-De-La-Garde">
+                <h3>Notre-Dame-De-La-Garde</h3>
+              </a>
+            </div>
+          </div>
+        </div>         
+      </section>
+    </main>
       
       <!-- Pied de page -->
-      <footer>
-        <div class="element-footer">
-          <h2>À propos</h2>
-            <p><a href="#">Fonctionnement du site</a></p>
-            <p><a href="#">Conditions générales</a></p>
-            <p><a href="#">Données et confidentialité</a></p>
-        </div>
-        <div class="element-footer">
-          <h2>Nos hébergements</h2>
-            <p><a href="#">Charte qualité</a></p>
-            <p><a href="#">Proposer votre hôtel</a></p>
-        </div>
-        <div class="element-footer">
-          <h2>Assistance</h2>
-            <p><a href="#">Centre d'aide</a></p>
-            <p><a href="#">Nous contacter</a></p>
-        </div>
-      </footer>
-</body>
+    <footer>
+      <div class="element-footer">
+        <h2>À propos</h2>
+          <p><a href="#">Fonctionnement du site</a></p>
+          <p><a href="#">Conditions générales</a></p>
+          <p><a href="#">Données et confidentialité</a></p>
+      </div>
+      <div class="element-footer">
+        <h2>Nos hébergements</h2>
+          <p><a href="#">Charte qualité</a></p>
+          <p><a href="#">Proposer votre hôtel</a></p>
+      </div>
+      <div class="element-footer">
+        <h2>Assistance</h2>
+          <p><a href="#">Centre d'aide</a></p>
+          <p><a href="#">Nous contacter</a></p>
+      </div>
+    </footer>
+  </body>
 </html> 

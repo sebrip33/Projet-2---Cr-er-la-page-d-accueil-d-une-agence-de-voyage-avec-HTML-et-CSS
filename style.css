@@ -35,6 +35,9 @@ header nav ul li a {
     color: black;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    margin-top: -20px;
+    border-top: 3px solid transparent;      /*Cache le border-top afin de ne pas bouger les deux éléments lors de son apparition*/
 }
 
 header nav ul li:first-child { /*Cible le premier élément li dans le nav*/
@@ -43,8 +46,8 @@ header nav ul li:first-child { /*Cible le premier élément li dans le nav*/
 
 header nav ul li a:hover {
     color: #0065fc;
+    border-top: medium solid #0065fc;       /* Faire apparaître le border-top bleu*/
 }
-
 .title-page {
     line-height: 0.7;
 }
@@ -213,6 +216,12 @@ header nav ul li a:hover {
     margin-left: 15px;
 }
 
+.container span {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px 0 30px 25px;
+}
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -248,19 +257,17 @@ header nav ul li a:hover {
     margin-bottom: -5px;
 }
 
-article {
+aside {
     background-color: #f2f2f2;
     border-radius: 14px;
     padding: 10px;
     width: 32%;
 }
 
-article h2 {
+aside h2 {
     font-size: 25px;
-}
-
-article h2 span {
-    float: right;
+    display: flex;
+    justify-content: space-around;
 }
 
 .cards-populaires {
@@ -398,11 +405,14 @@ footer {
     }
     .filters-li {
         margin-right: 20px;
+        display: flex;
+        align-items: baseline;
     }
     .filters-li ul {
         gap: 1em;
         padding-left: 20px;
-
+        display: flex;
+        flex-wrap: wrap;
     }
     .cards-wrapper {
         display: flex;
@@ -412,11 +422,22 @@ footer {
         width: 100%;
         margin-bottom: 40px;
     }
+    .container h1 {
+        padding-left: 48px;
+    }
     .card-description h3 {
         font-size: 16px;
     }
-    article {
+    .container span {
+        margin: 15px;
+        padding-left: 48px;
+    }
+    aside {
         width: 100%;
+    }
+    aside h2 {
+        justify-content: space-between;
+        padding: 0 48px;
     }
     .cards-populaires {
         display: flex;
@@ -472,11 +493,11 @@ footer {
     }
     header nav li {
         border-bottom: #f2f2f2 4px solid;
-        padding: 65px 30px 20px 30px;
+        padding: 50px 30px 10px 30px;
     }
     header nav ul li:first-child {
         padding-left: 15%;
-        padding-right:5%;
+        padding-right:0;
         margin-right: 0;
     }
     header nav ul li:last-child {
@@ -489,6 +510,9 @@ footer {
     }
     header nav li:hover {
         border-bottom: medium solid #0065fc;
+    }
+    header nav ul li a:hover {
+        border-top: 3px solid transparent;
     }
     main p {
         font-size: 22px;
@@ -530,7 +554,7 @@ footer {
         font-size: 17px;
         color: white;
     }
-    .form-search button[type="submit"] span {
+    .form-search button[type="submit"] span {       /*faire disparaître "rechercher" */
         display: none;
     }
     .filter-title {
@@ -563,7 +587,6 @@ footer {
         padding-left: 0;
         margin-top: 0;
         gap: 0.8em;
-        flex-shrink: 1;
     }
     .filters-li .blue {
         font-size: 22px;
@@ -576,11 +599,12 @@ footer {
         display: flex;
         flex-wrap: wrap-reverse;
     }
-    article {
+    aside {
         width: 100%;
         margin-bottom: 2em;
     }
-    article h2 {
+    aside h2 {
+        justify-content: space-between;
         font-size: 23px;
         font-weight: bold;
         margin-bottom: 15px;
@@ -592,9 +616,11 @@ footer {
         border-radius: 20px;
     }
     .card-populaire img {
-        width: 45%;
+        width: 44%;
     }
-    .description-text h3,
+    .description-text h3 {
+        font-size: 16px;
+    }
     .description-text p {
         font-size: 14px;
     }
@@ -605,6 +631,8 @@ footer {
         font-size: 23px;
         font-weight: bold;
         margin-bottom: 5px;
+        margin-left: 20px;
+        padding-left: 0;
     }
     .container h2 {
         display: none;
@@ -626,9 +654,13 @@ footer {
     .card-description .stars {
         margin-top: -8px;
     }
+    .container span {
+        display: none;
+    }
     .activites-container h1 {
         font-size: 23px;
         font-weight: bold;
+        margin-left: 20px;
     }
     .activites {
         display: flex;
