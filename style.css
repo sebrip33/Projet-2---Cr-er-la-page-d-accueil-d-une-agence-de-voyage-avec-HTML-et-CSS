@@ -597,7 +597,7 @@ footer {
     }
     .cards-wrapper {
         display: flex;
-        flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;    
     }
     aside {
         width: 100%;
@@ -633,9 +633,6 @@ footer {
         margin-bottom: 5px;
         margin-left: 20px;
         padding-left: 0;
-    }
-    .container h2 {
-        display: none;
     }
     .cards {
         width: 100%;
