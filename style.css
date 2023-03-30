@@ -132,7 +132,7 @@ header {
 }
 
 .filter-title {
-    padding: 9px 0 9px 9px;
+    padding: 9px 0;
     font-weight: 550;
     font-size: 18px;
     display: flex;
@@ -500,6 +500,7 @@ footer {
     header {
         flex-direction: column;
         gap: 2.5em;
+        margin-bottom: 2em;
     }
     .logo-header-left {
         display: flex;
@@ -553,6 +554,7 @@ footer {
     .form-search input[type="text"] {
         font-size: 16px;
         width: 100%;
+        padding-left: 1.2em;
     }
     .form-search ::placeholder {
         font-size: 19px;
@@ -576,11 +578,11 @@ footer {
         width: 100%;
         margin-bottom: 0;
         padding-bottom: 0;
-        font-size: 22px;
+        font-size: 18px;
     }
     .filter-fa {
-        width: 61%;
-        height: 24px;
+        width: 66%;
+        height: 27px;
         font-size: 13px;  
         justify-content: center;      
     }
@@ -595,10 +597,10 @@ footer {
     }
     .filters-li ul {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 0.6em;
         padding-left: 0;
         margin-top: 0;
-        gap: 0.8em;
         width: 100%;
     }
     .filters-li .blue {
@@ -606,7 +608,7 @@ footer {
     }
 
     .after-filter p{
-        font-size: 17px;
+        font-size: 16px;
     }
     .cards-wrapper {
         display: flex;
@@ -617,6 +619,7 @@ footer {
         width: 100%;
         margin-bottom: 2em;
         padding: 0 5px;
+        border-radius: 0;
     }
     aside h2 {
         justify-content: space-between;
@@ -670,11 +673,13 @@ footer {
         margin-top: -8px;
     }
     .container span {
-        display: none;
+        margin-left: 15px;
+        padding-top: 0;
     }
     .activites-container h1 {
         font-size: 23px;
         font-weight: bold;
+        margin-top: 0px;
     }
     .activites {
         display: flex;
@@ -704,5 +709,14 @@ footer {
     }
     .element-footer p {
         font-size: 16px;
+    }
+
+@media screen and (max-width: 370px) {
+    .filters-li ul {
+        grid-template-columns: 1fr;
+    }
+    .filters-li li {
+        width: 100%;
+        width: 81%;
     }
 }
