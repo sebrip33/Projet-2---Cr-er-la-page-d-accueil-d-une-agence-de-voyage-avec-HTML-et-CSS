@@ -1,9 +1,8 @@
 body {
     max-width: 1440px;
+    margin: auto;
+    padding: 0 40px;
     font-family: 'Raleway', sans-serif;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 40px;
 }
 
 h2 {
@@ -13,38 +12,35 @@ h2 {
 header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 4em;
+    align-items: center;
+    margin-bottom: 3.5em;
 }
 
 .logo-header-left img {
     width: 75px;
     height: auto;
+    position: absolute;
 }
 
-header nav ul {
+.header-right ul {
     display: flex;
-    flex-direction: row;
     list-style: none;
     margin: 0;
     padding: 0;
+    gap: 40px;
 }
 
-header nav ul li a {
+.header-right ul li a {
     display: flex;
     text-decoration: none;
     color: black;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    margin-top: -20px;
     border-top: 3px solid transparent;      /*Cache le border-top afin de ne pas bouger les deux éléments lors de son apparition*/
 }
 
-header nav ul li:first-child { /*Cible le premier élément li dans le nav*/
-    margin-right: 4em;
-}
-
-header nav ul li a:hover {
+.header-right ul li a:hover {
     color: #0065fc;
     border-top: medium solid #0065fc;       /* Faire apparaître le border-top bleu*/
 }
@@ -64,18 +60,18 @@ header nav ul li a:hover {
     display: flex;
     align-items: center;
     border: 2px solid #f2f2f2;
-    border-radius: 16px;
+    border-radius: 15px;
     padding: 0;
     margin-top: 1.5em;
-    width: 25%;
+    width: 415px;
     height: 50px;
     font-family: 'raleway', sans-serif;
 }
 
 .form-search label {
     background-color: #f2f2f2;
-    border-radius: 16px 0px 0px 16px;
-    padding: 0 15px 0 15px;
+    border-radius: 15px 0px 0px 15px;
+    padding: 0 16px 0 16px;
     font-size: 20px;
     height: 100%;
     display: flex;
@@ -93,6 +89,7 @@ header nav ul li a:hover {
     font-weight: bold;
     padding-left: 0.8em;
     height: 100%;
+    width: 230px;
 }
 
 .form-search ::placeholder {
@@ -108,7 +105,7 @@ header nav ul li a:hover {
     font-weight: 550;
     border: none;
     padding: 0em 1em;
-    border-radius: 0px 12px 12px 0px;
+    border-radius: 0px 15px 15px 0px;
     cursor: pointer;
     padding: 0.8em;
 }
@@ -128,9 +125,10 @@ header nav ul li a:hover {
 
 .filters-li ul {
     display: flex;
-    gap: 2.22em;
+    gap: 1em;
+    padding-left: 20px;
     flex-shrink: 1;
-    flex-grow: 1;
+    width: 65%;
 }
 
 .filter-title {
@@ -146,30 +144,28 @@ header nav ul li a:hover {
     color: black;
     border: 2px solid #e0dfdf;
     border-radius: 25px;
-    padding: 10px 2vw 10px 2vw;
+    padding: 10px 25px;
     font-weight: 550;
     font-size: 17px;
     max-width: 100%;
     height: 28px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-basis: 0;
-}
-
-.animaux {
-    white-space: nowrap;
 }
 
 .filter-fa .blue {
-    margin-right: 0.5em;
+    margin-right: 12px;
     font-size: 20px;
 }
 
 .filter-fa:hover {
-    background-color: rgba(25, 148, 167, 0.2);
+    background-color: #DEEBFF;
     cursor: pointer;
     
+}
+
+.pepites {
+    white-space: nowrap;
 }
 
 .after-filter .blue {
@@ -185,7 +181,7 @@ header nav ul li a:hover {
 }
 
 .after-filter {
-    font-size: 18px;
+    font-size: 17px;
     padding: 10px 0 20px 0;
     display: flex;
     align-items: center;
@@ -202,25 +198,23 @@ header nav ul li a:hover {
     flex-wrap: wrap;
     background-color: #f2f2f2;
     border-radius: 14px;
-    padding: 10px;
-    width: 62%;
+    width: 64%;
 }
 
 .container h1 {
     background-color: #f2f2f2;
-    font-size: 25px;
-    border-radius: 14px;
-    padding: 10px;
-    width: 60%;
-    margin-top: 8px;
-    margin-left: 15px;
+    font-size: 23px;
+    margin-left: 2.5rem;
+    margin-top: 28px;
+    margin-bottom: 16px;
 }
 
 .container span {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    padding: 20px 0 30px 25px;
+    padding: 15px 15px 30px 0;
+    margin-left: 2.5rem;
 }
 .cards {
     display: flex;
@@ -234,8 +228,8 @@ header nav ul li a:hover {
     padding: 5px;
     margin: 15px;
     margin-bottom: 20px;
-    width: 230px;
-    height: 195px;
+    width: 250px;
+    height: 207px;
     background-color: white;
 }
 
@@ -260,14 +254,14 @@ header nav ul li a:hover {
 aside {
     background-color: #f2f2f2;
     border-radius: 14px;
-    padding: 10px;
-    width: 32%;
+    width: 31%;
 }
 
 aside h2 {
-    font-size: 25px;
+    font-size: 23px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 28px 2rem 16px 2rem;
 }
 
 .cards-populaires {
@@ -278,14 +272,13 @@ aside h2 {
 
 .card-populaire {
     display: flex;
-    flex-direction: row;
     border-radius: 16px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     padding: 5px;
     margin: 15px;
     margin-bottom: 20px;
-    width: 340px;
-    height: 130px;
+    width: 369px;
+    height: 146px;
     background-color: white;
 }
 
@@ -308,19 +301,24 @@ aside h2 {
     height: 100%;
     margin-left: 2em;
     width: 60%;
+    margin-left: 15px;
 }
 
 .card-populaire-description h3 {
     margin-top: 10px;
 }
 
+.description-text {
+    line-height: 16px;
+}
+
+.card-populaire .stars {
+    margin-bottom: 5px;
+}
+
 .card-link {
     text-decoration: none;
     color: black;
-}
-.card-link:hover {
-    opacity: 0.7;
-    background-color: #cccccc;
 }
 
 .stars {
@@ -335,35 +333,39 @@ aside h2 {
 }
 
 .activites-container {
-    margin-top: 70px;
+    margin-top: 20px;
+    padding: 30px;
 }
 
 .activites-container h1 {
-    font-size: 25px;
+    font-size: 23px;
+    margin-bottom: 35px;
 }
 
 .activites {
-    background-color: #f9f9f9;
+    background-color: #FFFFFF;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
 }
 
 .elements-activites {
     background-color: white;
-    border-radius: 14px;
+    border-radius: 20px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
-    width: 22%;
+    width: 23%;
     height: 490px;
 }
 
 .elements-activites h3 {
     margin-left: 1em;
+    font-size: 17px;
+    padding-top: 5px;
 }
 .elements-activites img {
     width: 100%;
     height: 85%;
-    border-radius: 14px 14px 0px 0px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
 }
 
 
@@ -373,16 +375,15 @@ aside h2 {
 
 footer {
     display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
-    padding: 30px;
+    margin-top: 40px;
+    padding: 0 20px;
     background-color: #f2f2f2;
-    border-radius: 6px;
+    gap: 21%;
+    padding-bottom: 20px;
 }
 
 .element-footer {
     padding: 0.2em;
-    align-items: center;
 }
 
 .element-footer a {
@@ -390,29 +391,36 @@ footer {
     color: black;
 }
 
+.element-footer h2 {
+    font-size: 18px;
+}
+
 .element-footer p {
     margin-bottom: 0em;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     body {
-        margin: 35px;
-    }
-    .form-search {
-        width: 44%;
-        font-size: 19px;
+        margin: auto;
     }
     .filters-li {
         margin-right: 20px;
-        display: flex;
         align-items: baseline;
+        flex-direction: column;
+    }
+    .filter-title {
+        margin: 0;
     }
     .filters-li ul {
         gap: 1em;
-        padding-left: 20px;
+        padding-left: 0;
         display: flex;
         flex-wrap: wrap;
+        width: 100%;
+    }
+    .filter-fa {
+        font-size: 16px;
     }
     .cards-wrapper {
         display: flex;
@@ -423,38 +431,43 @@ footer {
         margin-bottom: 40px;
     }
     .container h1 {
-        padding-left: 48px;
+        margin-left: 25px;
+    }
+    .card {
+        width: 268px;
+        height: 207px;
     }
     .card-description h3 {
         font-size: 16px;
     }
     .container span {
-        margin: 15px;
-        padding-left: 48px;
+        margin-left: 25px;
     }
     aside {
         width: 100%;
     }
     aside h2 {
         justify-content: space-between;
-        padding: 0 48px;
+        margin: 30px 25px 10px 25px;
     }
     .cards-populaires {
         display: flex;
+        margin: 0 3px;
+        flex-wrap: nowrap;
     }
     .card-populaire {
-        width: 27%;
-        height: 135px;
+        width: 29%;
+        height: 146px;
         margin-left: 5px;
     }
     .card-populaire img {
-        width: 42%;
+        width: 40%;
     }
     .card-populaire-description {
         margin-left: 15px;
     }
     .description-text {
-        font-size: 12px;
+        font-size: 14px;
     }
     .elements-activites {
         width: 22%;
@@ -466,8 +479,14 @@ footer {
         margin-bottom: -10px;
     }
     .elements-activites h3 {
-        margin-left: 0.5em;
+        padding-top: 7px;
         font-size: 16px;
+    }
+    footer {
+        gap: 14%;
+    }
+    .element-footer h2 {
+        font-size: 18px;
     }
     .element-footer p {
         font-size: 16px;
@@ -475,44 +494,41 @@ footer {
 }
 @media screen and (max-width: 768px) {
     body {
-        margin: 5px;
+        margin: 0;
+        padding: 0;
     }
     header {
-        display: flex;
         flex-direction: column;
-        margin-bottom: 2.5em;
+        gap: 2.5em;
     }
     .logo-header-left {
         display: flex;
         justify-content: center;
+        margin-top: 30px;
     }
-    header nav ul {
-        display: flex;
-        justify-content: center;
-        margin-left: -2em;
+    .header-right {
+        width: 100%;
     }
-    header nav li {
+    .header-right ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0;
+    }
+    .header-right li {
         border-bottom: #f2f2f2 4px solid;
-        padding: 50px 30px 10px 30px;
     }
-    header nav ul li:first-child {
-        padding-left: 15%;
-        padding-right:0;
-        margin-right: 0;
-    }
-    header nav ul li:last-child {
-        padding-left: 18%;
-        padding-right: 10%;
-        margin-left: 0;
-    }
-    header nav ul li a {
+    .header-right ul li a {
         font-size: 17px;
     }
-    header nav li:hover {
+    .header-right li:hover {
         border-bottom: medium solid #0065fc;
     }
-    header nav ul li a:hover {
+    .header-right ul li a:hover {
         border-top: 3px solid transparent;
+    }
+    .section-1,
+    .after-filter {
+        margin: 0 20px;
     }
     main p {
         font-size: 22px;
@@ -528,16 +544,15 @@ footer {
         font-size: 17px;
     }
     .form-search {
-        height: 50px;
-        width: 60%;
-        justify-content: space-between;
+        width: 100%;
     }
     .form-search label {
-        max-width: 10%;
+        width: 10%;
         padding: 2px 15px 2px 15px;
     }
     .form-search input[type="text"] {
         font-size: 16px;
+        width: 100%;
     }
     .form-search ::placeholder {
         font-size: 19px;
@@ -564,12 +579,10 @@ footer {
         font-size: 22px;
     }
     .filter-fa {
-        height: 30px;
-        font-size: 13px;        
-    }
-    .familial,
-    .animaux {
-        margin-right: 20px;
+        width: 61%;
+        height: 24px;
+        font-size: 13px;  
+        justify-content: center;      
     }
     .filters-li {
         display: flex;
@@ -583,10 +596,10 @@ footer {
     .filters-li ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        justify-content:left;
         padding-left: 0;
         margin-top: 0;
         gap: 0.8em;
+        width: 100%;
     }
     .filters-li .blue {
         font-size: 22px;
@@ -597,11 +610,13 @@ footer {
     }
     .cards-wrapper {
         display: flex;
-        flex-wrap: wrap-reverse;    
+        flex-wrap: wrap-reverse;
+        padding: 0;
     }
     aside {
         width: 100%;
         margin-bottom: 2em;
+        padding: 0 5px;
     }
     aside h2 {
         justify-content: space-between;
@@ -626,6 +641,8 @@ footer {
     }
     .container {
         width: 100%;
+        background-color: #FFFFFF;
+        padding: 0 5px;
     }
     .container h1 {
         font-size: 23px;
@@ -633,6 +650,7 @@ footer {
         margin-bottom: 5px;
         margin-left: 20px;
         padding-left: 0;
+        background-color: #FFFFFF;
     }
     .cards {
         width: 100%;
@@ -657,17 +675,15 @@ footer {
     .activites-container h1 {
         font-size: 23px;
         font-weight: bold;
-        margin-left: 20px;
     }
     .activites {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        padding: 20px;
     }
     .elements-activites {
         width: 100%;
-        height: 250px;
+        height: 220px;
         border-radius: 20px;
     }
     .elements-activites img {
@@ -676,6 +692,7 @@ footer {
     }
     .elements-activites h3 {
         font-size: 19px;
+        padding-top: 0;
     }
     footer {
         display: flex;

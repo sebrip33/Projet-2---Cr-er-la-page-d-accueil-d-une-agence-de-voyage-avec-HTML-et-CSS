@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/05c2ed4270.js" crossorigin="anonymous"></script>
     <title>Booki - Accueil</title>
@@ -14,18 +15,16 @@
       <div class="logo-header-left">
         <img src="images/logo/Booki.png" alt="Logo-Booki">
       </div>
-      <div class="header-right">
-        <nav>
-          <ul>
-            <li><a href="#hebergements">Hébergements</a></li>
-            <li><a href="#activites">Activités</a></li>
-          </ul>
-        </nav>
-      </div>
+      <nav class="header-right">
+        <ul>
+          <li><a href="#hebergements">Hébergements</a></li>
+          <li><a href="#activites">Activités</a></li>
+        </ul>
+      </nav>
     </header>
     
     <main>
-      <section>
+      <section class="section-1">
         <div class="title-page">     
           <h1>Trouver votre hébergement pour des vacances de rêve</h1>
           <p>En plein centre ville ou en pleine nature</p>
@@ -45,7 +44,7 @@
             <li class="filter-fa eco"><i class="fa-solid fa-money-bill-wave blue"></i>Économique</li>
             <li class="filter-fa familial"><i class="fa-solid fa-person blue"></i>Familial</li>
             <li class="filter-fa romantique"><i class="fa-solid fa-heart blue"></i>Romantique</li>
-            <li class="filter-fa animaux"><i class="fa-solid fa-dog blue"></i>Animaux autorisés</li>
+            <li class="filter-fa pepites"><i class="fa-solid fa-fire blue"></i>Nos pépites</li>
           </ul>
         </div>
       </section>
@@ -234,38 +233,36 @@
         </div>
       </section>
 
-      <section>
-        <div class="activites-container"> <!-- Création du bloc container de la section -->
-          <h1 id="activites">Activités à Marseille</h1>
-          <div class="activites"> <!-- Bloc regroupant les cartes d'activités -->
-            <div class="elements-activites">  <!-- Création d'une carte d'activité -->
-              <a href="#" class="card-link">
-                <img src="Images/activites/3_medium/vieux-port.jpg"
-                alt="Image Vieux-Port">
-                <h3>Vieux-Port</h3>
-              </a>
-            </div>
-            <div class="elements-activites">
-              <a href="#" class="card-link">
-                <img src="Images/activites/3_medium/fort-de-pommeges.jpg"
-                alt="Image Fort de Pomègues">
-                <h3>Fort de Pomègues</h3>
-              </a>
-            </div>
-            <div class="elements-activites">
-              <a href="#" class="card-link">
-                <img src="Images/activites/3_medium/calanques.jpg"
-                alt="Image Parc national des Calanques">
-                <h3>Parc national des Calanques</h3>
-              </a>
-            </div>
-            <div class="elements-activites">
-              <a href="#" class="card-link">
-                <img src="Images/activites/3_medium/notre-dame-de-la-garde.jpg"
-                alt="Image Notre-Dame-De-La-Garde">
-                <h3>Notre-Dame-De-La-Garde</h3>
-              </a>
-            </div>
+      <section class="activites-container">   <!-- Création du bloc container de la section -->
+        <h1 id="activites">Activités à Marseille</h1>
+        <div class="activites"> <!-- Bloc regroupant les cartes d'activités -->
+          <div class="elements-activites">  <!-- Création d'une carte d'activité -->
+            <a href="#" class="card-link">
+              <img src="Images/activites/3_medium/vieux-port.jpg"
+              alt="Image Vieux-Port">
+              <h3>Vieux-Port</h3>
+            </a>
+          </div>
+          <div class="elements-activites">
+            <a href="#" class="card-link">
+              <img src="Images/activites/3_medium/fort-de-pommeges.jpg"
+              alt="Image Fort de Pomègues">
+              <h3>Fort de Pomègues</h3>
+            </a>
+          </div>
+          <div class="elements-activites">
+            <a href="#" class="card-link">
+              <img src="Images/activites/3_medium/calanques.jpg"
+              alt="Image Parc national des Calanques">
+              <h3>Parc national des Calanques</h3>
+            </a>
+          </div>
+          <div class="elements-activites">
+            <a href="#" class="card-link">
+              <img src="Images/activites/3_medium/notre-dame-de-la-garde.jpg"
+              alt="Image Notre-Dame-De-La-Garde">
+              <h3>Notre-Dame-De-La-Garde</h3>
+            </a>
           </div>
         </div>         
       </section>
