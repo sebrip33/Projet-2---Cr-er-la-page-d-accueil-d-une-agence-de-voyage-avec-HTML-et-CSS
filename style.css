@@ -54,6 +54,7 @@ header {
 
 .title-page p {
     font-size: 18px;
+    margin-bottom: 40px;
 }
 
 .form-search {
@@ -598,7 +599,7 @@ footer {
     .filters-li ul {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 0.6em;
+        grid-column-gap: 6px;
         padding-left: 0;
         margin-top: 0;
         width: 100%;
@@ -710,13 +711,12 @@ footer {
     .element-footer p {
         font-size: 16px;
     }
-
+}
 @media screen and (max-width: 370px) {
     .filters-li ul {
         grid-template-columns: 1fr;
     }
     .filters-li li {
-        width: 100%;
         width: 81%;
     }
 }
